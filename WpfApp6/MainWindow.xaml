@@ -1,0 +1,62 @@
+﻿<Window x:Class="WpfApp6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp6"
+        mc:Ignorable="d"
+        WindowStyle="ThreeDBorderWindow"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        FontFamily="Roboto"
+        Icon="C:\Users\ktoto\source\repos\WpfApp6\WpfApp6\icon_1.png"
+        Height="300" 
+        Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Column="0"
+                   Grid.Row="0"
+                   Grid.ColumnSpan="2"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="40"
+                   x:Name="MainText">
+            Римский калькулятор
+        </TextBlock>
+
+        <StackPanel Grid.Row="1"
+            VerticalAlignment="Center">
+            <TextBlock Text="Число в арабской форме (от 1 до 15)" 
+               Width="262" 
+               HorizontalAlignment="Center"/>
+            <TextBox FontSize="40" 
+                     Height="85" 
+                     Width="262"
+                     x:Name="TextBoxOne"
+                     TextChanged="TextBoxOne_TextChanged"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1"
+                    Grid.Column="1"
+                    VerticalAlignment="Center">
+            <TextBlock Text="Число в римской форме (от I до XV)" 
+                        Width="262" 
+                        HorizontalAlignment="Center"/>
+            <TextBox FontSize="40" 
+                     Height="85" 
+                     Width="262"
+                     x:Name="TextBoxTwo"
+                     TextChanged="TextBoxTwo_TextChanged"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
